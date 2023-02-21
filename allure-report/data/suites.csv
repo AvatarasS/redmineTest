@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Feb 21 16:24:34 EET 2023","Tue Feb 21 16:24:38 EET 2023","4449","chromium","redmine.test.ts","","","","Verify search functionality",""
+"passed","Tue Feb 21 16:24:34 EET 2023","Tue Feb 21 16:24:38 EET 2023","3555","chromium","redmine.test.ts","","","","Trying to signup with Cyrillic letters",""
+"passed","Tue Feb 21 16:24:38 EET 2023","Tue Feb 21 16:24:41 EET 2023","3675","chromium","redmine.test.ts","","","","Take screenshot of graph",""
+"passed","Tue Feb 21 16:24:34 EET 2023","Tue Feb 21 16:24:38 EET 2023","4438","chromium","redmine.test.ts","","","","Verify login functionality",""
+"passed","Tue Feb 21 16:24:34 EET 2023","Tue Feb 21 16:24:39 EET 2023","5524","chromium","redmine.test.ts","","","","Verify roadmap sorting",""
