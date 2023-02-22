@@ -1,6 +1,0 @@
-Messages (5944)
-Issues (5182)
-Changesets (3677)
-Wiki pages (192)
-Redmine plugins (107)
-News (25)
