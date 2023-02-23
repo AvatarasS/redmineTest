@@ -9,7 +9,6 @@ export class RegisterPage {
     userLastName: Locator;
     userMail: Locator;
     submitButton: Locator;
-    use: any;
     errorExplanation: Locator;
     constructor(page: Page) {
         this.page = page;
@@ -22,17 +21,15 @@ export class RegisterPage {
         this.submitButton = page.locator('//*[@id="new_user"]/input');
         this.errorExplanation = page.locator('#errorExplanation');
     }
-
-    async register(login, password, firstname, lastname, mail) {
+    async fillCredentialFields(login, password, firstname, lastname, mail) {
         await this.userLogin.fill(login);
         await this.userPassword.fill(password);
         await this.userPasswordAgain.fill(password);
         await this.userFirstName.fill(firstname);
         await this.userLastName.fill(lastname);
         await this.userMail.fill(mail);
-        await this.submitButton.click();
-        await expect(this.errorExplanation).toBeEnabled();
     }
-
-
+    async clickSubmitButton(){
+        await this.submitButton.click();
+    }
 }

@@ -14,10 +14,11 @@ export class LoginPage {
         this.flasError = page.locator('//*[@id="flash_error"]');
     }
 
-    async login(login, password){
+    async fillLoginFields(login, password){
         await this.usernameField.fill(login);
+        expect(this.usernameField).toHaveValue(login);
         await this.passwordField.fill(password)
-        await this.submitButton.click();
+        expect(this.passwordField).toHaveValue(password);
     }
 
 
