@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test || :",
+    "posttest": "npm run allure:generate",
+    "allure:generate": "allure generate --clean allure-results || :",
+    "postallure:generate": "npm run allure:open",
+    "allure:open": "allure open"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.30.0",
+    "@playwright/test": "^1.31.0",
     "allure-commandline": "^2.21.0",
-    "allure-playwright": "^2.0.0"
+    "allure-playwright": "^2.0.0",
+    "experimental-allure-playwright": "^0.0.3",
+    "playwright": "1.31.0"
   }
 }

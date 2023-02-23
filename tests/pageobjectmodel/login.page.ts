@@ -13,15 +13,13 @@ export class LoginPage {
         this.submitButton = page.locator('input[type=submit]');
         this.flasError = page.locator('//*[@id="flash_error"]');
     }
-
     async fillLoginFields(login, password){
         await this.usernameField.fill(login);
         expect(this.usernameField).toHaveValue(login);
         await this.passwordField.fill(password)
         expect(this.passwordField).toHaveValue(password);
     }
-
-
-
-
+    async clicksubmitButton(){
+        await this.submitButton.click();
+    }
 }

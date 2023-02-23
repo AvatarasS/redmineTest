@@ -7,11 +7,11 @@ export class RoadmapPage {
         this.page = page;
         this.submitButton = page.locator('.button-small');
     }
-
     async turnOffNotUsedCheckbox(){
         let trackersIdCheckbox = await this.page.locator('//*[@id="sidebar"]/form/ul[1]/li//input[not(@value="1")]').all();
         for (let element of trackersIdCheckbox){
             await element.click();
+            expect(element).not.toBeChecked();
         }
         await this.submitButton.click();
     }

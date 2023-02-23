@@ -15,28 +15,30 @@ export class MainPage {
         this.roadmap = page.locator('.roadmap');
         this.repository = page.locator('.repository');
     }
-
     async visit(){
         await this.page.goto('https://www.redmine.org/');
+        expect(this.page).toHaveURL('https://www.redmine.org/');
     }
     async getLoginPage(){
         await this.loginPageButton.click();
+        expect(this.page).toHaveURL('https://www.redmine.org/login');
     }
     async getRegistrationPage(){
         await this.registerPageButton.click();
+        expect(this.page).toHaveURL('https://www.redmine.org/account/register');
     }
     async getSearch(search){
         await this.searchField.fill(search);
+        expect(this.searchField).toHaveValue(search);
         await this.page.keyboard.press('Enter');
+        await expect(this.page).toHaveURL(new RegExp('^https://www.redmine.org/projects/redmine/search'));
     }
     async getRoadmapPage(){
         await this.roadmap.click();
+        expect(this.page).toHaveURL('https://www.redmine.org/projects/redmine/roadmap');
     }
     async getRepositoryPage(){
         await this.repository.click();
+        expect(this.page).toHaveURL('https://www.redmine.org/projects/redmine/repository');
     }
-
-
-
-
 }

@@ -23,11 +23,17 @@ export class RegisterPage {
     }
     async fillCredentialFields(login, password, firstname, lastname, mail) {
         await this.userLogin.fill(login);
+        expect(this.userLogin).toHaveValue(login);
         await this.userPassword.fill(password);
+        expect(this.userPassword).toHaveValue(password);
         await this.userPasswordAgain.fill(password);
+        expect(this.userPasswordAgain).toHaveValue(password);
         await this.userFirstName.fill(firstname);
+        expect(this.userFirstName).toHaveValue(firstname);
         await this.userLastName.fill(lastname);
+        expect(this.userLastName).toHaveValue(lastname);
         await this.userMail.fill(mail);
+        expect(this.userMail).toHaveValue(mail);
     }
     async clickSubmitButton(){
         await this.submitButton.click();

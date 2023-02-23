@@ -5,17 +5,17 @@ This project is an automated testing suite for the website 'https://www.redmine.
 ### Project Setup
 
 To run the automated tests in this project, follow these steps:
-1\. Clone this repository to your local machine.
-2\. Run 'npm test' to run the tests.
+1. Clone this repository to your local machine.
+2. Run 'npm test' to run the tests.
 
 ### Test Cases
 
 The following test cases are included in this project:
-1\. Verify login functionality: Tests the ability to log in to the Redmine.org website with valid credentials.
-2\. Trying to signup with Cyrillic letters: Tests the ability to sign up with Cyrillic letters.
-3\. Verify search functionality: Tests the search functionality of the website by performing a deep search and verifying the results.
-4\. Verify roadmap sorting: Tests the ability to sort the roadmap on the website.
-5\. Take screenshot of graph: Takes a screenshot of a graph on the website.
+1. Verify login functionality: Tests the ability to log in to the Redmine.org website with valid credentials.
+2. Trying to signup with Cyrillic letters: Tests the ability to sign up with Cyrillic letters.
+3. Verify search functionality: Tests the search functionality of the website by performing a deep search and verifying the results.
+4. Verify roadmap sorting: Tests the ability to sort the roadmap on the website.
+5. Take screenshot of graph: Takes a screenshot of a graph on the website.
 
 ### Results
 
