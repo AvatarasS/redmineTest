@@ -11,11 +11,11 @@ To run the automated tests in this project, follow these steps:
 ### Test Cases
 
 The following test cases are included in this project:
-1. Verify login functionality: Tests the ability to log in to the Redmine.org website with valid credentials.
-2. Trying to signup with Cyrillic letters: Tests the ability to sign up with Cyrillic letters.
-3. Verify search functionality: Tests the search functionality of the website by performing a deep search and verifying the results.
-4. Verify roadmap sorting: Tests the ability to sort the roadmap on the website.
-5. Take screenshot of graph: Takes a screenshot of a graph on the website.
+1. ID#001 To check response of logining into a not activated, existing account with valid credentials.
+2. ID#002 To try signup with cyrillic letters.
+3. ID#003 To verify if search filters are functional and display results grouped by category.
+4. ID#004 To verify that the tag sorting functionality in the roadmap works correctly and displays the selected tag.
+5. ID#005 To verify if the graph is displayed correctly and take a screenshot of it.
 
 ### Results
 
