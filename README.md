@@ -12,7 +12,7 @@ To run the automated tests in this project, follow these steps:
 
 The following test cases are included in this project:
 1. ID#001 To check response of logining into a not activated, existing account with valid credentials.
-2. ID#002 To try signup with cyrillic letters.
+2. ID#002 To try make a new customer's account with cyrillic letters.
 3. ID#003 To verify if search filters are functional and display results grouped by category.
 4. ID#004 To verify that the tag sorting functionality in the roadmap works correctly and displays the selected tag.
 5. ID#005 To verify if the graph is displayed correctly and take a screenshot of it.

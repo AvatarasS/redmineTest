@@ -1,4 +1,4 @@
-import { Locator, Page } from '@playwright/test';
+import { expect, Locator, Page } from '@playwright/test';
 
 export class RepositoryPage {
     page: Page;
@@ -14,6 +14,7 @@ export class RepositoryPage {
 
     async statisticClick(){
         await this.statisticIcon.click();
+        expect(this.page).toHaveURL('https://www.redmine.org/projects/redmine/repository/statistics');
     }
     async statisticImageSave(){
         await this.statisticImage.screenshot({ path: 'screens/screen.png' });

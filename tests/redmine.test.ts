@@ -16,11 +16,11 @@ test("ID#001 To check response of logining into a not activated, existing accoun
     const loginPage = new LoginPage(page);
     await mainPage.getLoginPage();
     await loginPage.fillLoginFields('Memas', 'tQs5_5LM_sV!9*g');
-    await loginPage.clicksubmitButton();
-    expect(loginPage.flasError).toContainText("You haven't activated your account yet.");
+    await loginPage.clickSubmitButton();
+    expect(loginPage.flashError).toContainText("You haven't activated your account yet.");
     console.log('The logining process should be finished unsuccessfully, the corresponding information message should be displayed to the user')
 });
-test("ID#002 To try signup with cyrillic letters", async({ page }) => {
+test("ID#002 To try make a new customer's account with cyrillic letters", async({ page }) => {
     const mainPage = new MainPage(page);
     const registerPage = new RegisterPage(page);
     await mainPage.getRegistrationPage();
@@ -33,7 +33,8 @@ test("ID#002 To try signup with cyrillic letters", async({ page }) => {
 test("ID#003 To verify if search filters are functional and display results grouped by category.", async ({ page }) => {
     const mainPage = new MainPage(page);
     const searchPage = new SearchPage(page);
-    await mainPage.getSearch('test');
+    await mainPage.enterToSearchField('test');
+    await mainPage.pushEnterButton();
     await searchPage.issueCheckboxChecker();
     await searchPage.clicksubmitButton();
     await searchPage.getResult()
@@ -45,6 +46,7 @@ test("ID#004 To verify that the tag sorting functionality in the roadmap works c
     const roadmapPage = new RoadmapPage(page);
     await mainPage.getRoadmapPage();
     await roadmapPage.turnOffNotUsedCheckbox();
+    await roadmapPage.clickSubmitButton();
     await roadmapPage.checkContaining();
     console.log('Sorting works correctly and displays only the selected option.');
 });

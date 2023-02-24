@@ -5,13 +5,13 @@ export class LoginPage {
     usernameField: Locator;
     passwordField: Locator;
     submitButton: Locator;
-    flasError: Locator;
+    flashError: Locator;
     constructor(page: Page){
         this.page = page;
         this.usernameField = page.locator('input#username');
         this.passwordField = page.locator('input#password');
         this.submitButton = page.locator('input[type=submit]');
-        this.flasError = page.locator('//*[@id="flash_error"]');
+        this.flashError = page.locator('//*[@id="flash_error"]');
     }
     async fillLoginFields(login, password){
         await this.usernameField.fill(login);
@@ -19,7 +19,7 @@ export class LoginPage {
         await this.passwordField.fill(password)
         expect(this.passwordField).toHaveValue(password);
     }
-    async clicksubmitButton(){
+    async clickSubmitButton(){
         await this.submitButton.click();
     }
 }

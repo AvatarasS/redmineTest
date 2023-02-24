@@ -13,6 +13,8 @@ export class RoadmapPage {
             await element.click();
             expect(element).not.toBeChecked();
         }
+    }
+    async clickSubmitButton(){
         await this.submitButton.click();
     }
     async checkContaining(){

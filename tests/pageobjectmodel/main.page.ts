@@ -27,9 +27,11 @@ export class MainPage {
         await this.registerPageButton.click();
         expect(this.page).toHaveURL('https://www.redmine.org/account/register');
     }
-    async getSearch(search){
+    async enterToSearchField(search){
         await this.searchField.fill(search);
         expect(this.searchField).toHaveValue(search);
+    }
+    async pushEnterButton(){
         await this.page.keyboard.press('Enter');
         await expect(this.page).toHaveURL(new RegExp('^https://www.redmine.org/projects/redmine/search'));
     }
