@@ -28,7 +28,7 @@ The following test cases are included in this project:
 
 ### Results
 
-The test results are automatically generated and can be found in the ```allure-reports``` directory. To view the results, run 'npm run allure:generate'.
+The test results are automatically generated and can be found in the 'allure-reports' directory. To view the results, run ```npm run allure:generate```.
 
 ### Notes
 
