@@ -1,6 +1,6 @@
 # Automated Testing for Redmine.org using Playwright and TypeScript
 
-This project is an automated testing suite for the website (https://www.redmine.org/), written in Playwright using TypeScript. The tests cover various features of the website such as login functionality, registration, search, and more.
+This project is an automated testing suite for the website [Redmine](https://www.redmine.org/), written in Playwright using TypeScript. The tests cover various features of the website such as login functionality, registration, search, and more.
 
 ### Project Setup
 
