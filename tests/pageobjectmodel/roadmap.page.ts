@@ -16,7 +16,7 @@ export class RoadmapPage {
     async clickSubmitButton() {
         await this.submitButton.click();}
 
-    async expectIssueContaining() {
+    async checkIssueContaining() {
         let issueTrackers = await this.page.locator('//*[@id="roadmap"]/form[1]//tbody/tr//a').all();
         for (let element of issueTrackers) {
             expect(await element.innerText()).toContain('Defect');}}

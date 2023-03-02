@@ -47,14 +47,14 @@ test("ID#003 To verify if search filters are functional and display results grou
     await mainPage.pushEnterButton();
     await searchPage.issueCheckboxChecker();
     await searchPage.clicksubmitButton();
-    await searchPage.expectResult();
+    await searchPage.checkResult();
 });
 
 test("ID#004 To verify that the tag sorting functionality in the roadmap works correctly and displays the selected tag.", async ({}) => {
     await mainPage.getRoadmapPage();
     await roadmapPage.turnOffNotUsedCheckbox();
     await roadmapPage.clickSubmitButton();
-    await roadmapPage.expectIssueContaining();
+    await roadmapPage.checkIssueContaining();
 });
 
 test("ID#005 To verify if the graph on '/repository/statistics' path is displayed correctly.", async ({}) => {

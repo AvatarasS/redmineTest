@@ -16,7 +16,7 @@ export class SearchPage {
     async clicksubmitButton() {
         await this.submitButton.click();}
 
-    async expectResult() {
+    async checkResult() {
         let resultsCount = await this.page.locator('//*[@id="search-results-counts"]//a').all();
         for (let element of resultsCount) {
             expect(element).toBeVisible();}}
