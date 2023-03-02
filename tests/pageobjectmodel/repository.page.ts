@@ -4,20 +4,14 @@ export class RepositoryPage {
     page: Page;
     statisticIcon: Locator;
     statisticImage: Locator;
-    
-    constructor(page: Page){
+    constructor(page: Page) {
         this.page = page;
         this.statisticIcon = page.locator('.icon-stats');
         this.statisticImage = page.locator('//*[@id="content"]/p[1]/embed');
-      
     }
 
-    async statisticClick(){
+    async statisticClick() {
         await this.statisticIcon.click();
         expect(this.page).toHaveURL('https://www.redmine.org/projects/redmine/repository/statistics');
     }
-    async statisticImageSave(){
-        await this.statisticImage.screenshot({ path: 'screens/screen.png' });
-    }
- 
 }
