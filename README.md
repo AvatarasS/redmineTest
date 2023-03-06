@@ -28,11 +28,11 @@ The following test cases are included in this project:
 
 ### Results
 
-The test results are automatically generated and can be found in the 'allure-reports' directory. To view the results, run ```npm run allure:generate```.
-By default, Allure takes a screenshot of the test result in any case. To turn off screenshots, change the ```screenshot: "on"``` to ```"screenshot: "off"``` in the 'playwright.config.ts'. To take a screenshot only in case of failure, set it to ```screenshot: "only-on-failure```.
+- The test results are automatically generated and can be found in the 'allure-reports' directory. To view the results, run ```npm run allure:generate```.
+- By default, Allure takes a screenshot of the test result in any case. To turn off screenshots, change the ```screenshot: "on"``` to ```"screenshot: "off"``` in the 'playwright.config.ts'. To take a screenshot only in case of failure, set it to ```screenshot: "only-on-failure```.
 
 ### Notes
 
-The test cases can be found in the `tests' directory.
-The page object models can be found in the 'pageobjectmodel' directory.
-To run the tests with tracing enabled, use the following command: ```npx playwright test --trace on```. This will provide more detailed information during the test run, which can be helpful for debugging purposes.
+- The test cases can be found in the `tests' directory.
+- The page object models can be found in the 'pageobjectmodel' directory.
+- To run the tests with tracing enabled, use the following command: ```npx playwright test --trace on```. This will provide more detailed information during the test run, which can be helpful for debugging purposes.
