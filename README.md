@@ -29,6 +29,7 @@ The following test cases are included in this project:
 ### Results
 
 The test results are automatically generated and can be found in the 'allure-reports' directory. To view the results, run ```npm run allure:generate```.
+By default, Allure takes a screenshot of the test result in any case. To turn off screenshots, change the ```screenshot: "on"``` to ```"screenshot: "off"``` in the 'playwright.config.ts'. To take a screenshot only in case of failure, set it to ```screenshot: "only-on-failure```.
 
 ### Notes
 
