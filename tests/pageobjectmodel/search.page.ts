@@ -5,19 +5,25 @@ export class SearchPage {
     submitButton: Locator;
     constructor(page: Page) {
         this.page = page;
-        this.submitButton = page.locator('//*[@id="search-form"]/p[3]/input');}
+        this.submitButton = page.locator('//*[@id="search-form"]/p[3]/input');
+    }
 
     async issueCheckboxChecker() {
         const issueCheckbox = await this.page.locator('//*[@id="search-types"]//input[not(@checked="checked")]').all();
         for (let element of issueCheckbox) {
             await element.click();
-            expect(element).toBeChecked();}}
+            expect(element).toBeChecked();
+        }
+    }
 
     async clicksubmitButton() {
-        await this.submitButton.click();}
+        await this.submitButton.click();
+    }
 
     async checkResult() {
         let resultsCount = await this.page.locator('//*[@id="search-results-counts"]//a').all();
         for (let element of resultsCount) {
-            expect(element).toBeVisible();}}
+            expect(element).toBeVisible();
+        }
+    }
 }

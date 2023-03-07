@@ -17,30 +17,37 @@ export class RegisterPage {
         this.userLastName = page.locator('#user_firstname');
         this.userMail = page.locator('#user_mail');
         this.submitButton = page.locator('//*[@id="new_user"]/input');
-        this.errorExplanation = page.locator('#errorExplanation');}
+        this.errorExplanation = page.locator('#errorExplanation');
+    }
 
     async fillLoginField(login) {
         await this.userLogin.fill(login);
-        expect(this.userLogin).toHaveValue(login);}
+        expect(this.userLogin).toHaveValue(login);
+    }
 
     async fillPasswordField(password) {
         await this.userPassword.fill(password);
         expect(this.userPassword).toHaveValue(password);
         await this.userPasswordAgain.fill(password);
-        expect(this.userPasswordAgain).toHaveValue(password);}
+        expect(this.userPasswordAgain).toHaveValue(password);
+    }
     
     async fillFirstnameField(firstname) {
         await this.userFirstName.fill(firstname);
-        expect(this.userFirstName).toHaveValue(firstname);}
+        expect(this.userFirstName).toHaveValue(firstname);
+    }
 
     async fillLastnameField(lastname) {
         await this.userLastName.fill(lastname);
-        expect(this.userLastName).toHaveValue(lastname);}
+        expect(this.userLastName).toHaveValue(lastname);
+    }
     
     async fillMailField(mail) {
         await this.userMail.fill(mail);
-        expect(this.userMail).toHaveValue(mail);}
+        expect(this.userMail).toHaveValue(mail);
+    }
 
     async clickSubmitButton(){
-        await this.submitButton.click();}
+        await this.submitButton.click();
+    }
 }
